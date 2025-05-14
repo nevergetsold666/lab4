@@ -1,0 +1,25 @@
+Console.WriteLine("Автор: ");
+Console.WriteLine("Варіант 16");
+try
+{
+    double A, X, Y;
+
+    Console.Write("Введіть дійсне число A: ");
+    A = double.Parse(Console.ReadLine());
+
+    X = (A + 4.2) * 7 / 8.2;
+
+    if (X <= 2 || X > 18)
+        Y = -(X + 2);
+    else if (2 < X && X < 8)
+        Y = Math.Pow(-1, X);
+    else
+        Y = 2 * X / Math.Sqrt(X + 4);
+
+    Console.WriteLine($"X = {X:F4}");
+    Console.WriteLine($"Y = {Y:F4}");
+}
+catch (Exception K)
+{
+    Console.WriteLine("Помилка: " + K.Message);
+}
